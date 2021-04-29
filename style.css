@@ -1,0 +1,43 @@
+body {
+    font-family:cursive;
+    font-size: 30px;
+    color: rgb(48, 47, 47);
+    background-color: rgb(255, 253, 236);display: flex;
+    justify-content: center;
+}
+
+.container {
+    border: rgb(172, 170, 170) 2px solid;
+    width: max-content;
+    height: max-content;
+    padding: 20px;
+    margin: 50px;
+    border-radius: 10px;
+    background-color:rgb(224, 224, 238);
+    box-shadow: 5px 5px 5px gray;
+}
+.input-style {
+    width: 350px;
+    height: 25px;
+    margin: 10px 15px 0 15px;
+    border-radius: 5px;    
+}
+#submitBtn {
+    font-size: 20px;
+    padding: 10px;
+    height: min-content;
+    background-color: rgb(253, 212, 226);
+    font-family: cursive;
+}
+
+input {
+    background-color: lavenderblush;
+}
+small {
+    font-size: 15px;
+    padding: 15px;
+    color: red;
+}
+h3 {
+    margin-left: 35px;
+}
