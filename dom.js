@@ -21,6 +21,7 @@ function valideEmail() {
     const mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if (email.value.match(mailformat)) {
         email.style.borderColor = "green";
+        errorEmail.innerHTML = "";
         return true;
     } else {
         email.style.borderColor = "red";
@@ -38,6 +39,7 @@ function valideUser() {
     } else {
         user.value.innerHTML = user.value;
         user.style.borderColor = "green";
+        errorUser.innerHTML = '';
         return true;
     }
 }                           
@@ -49,17 +51,21 @@ function validePassword() {
         return false;
     } else {
         password.style.borderColor = "green";
+        errorPassword.innerHTML = "";
         return true;
     }
 }           
 
 function validePassword2() {
-    if (confirmPassword.value == "" || password.value != confirmPassword.value) {
+    if (confirmPassword.value == "") {
         errorConfirm.innerHTML = "Password2 is required";
+    } else if (password.value != confirmPassword.value) {
         confirmPassword.style.borderColor = "red";
+        errorConfirm.innerHTML = "Password2 does not match"
         return false;
     } else {
         confirmPassword.style.borderColor = "green";
+        errorConfirm.innerHTML = "";
         return true;
     }
 }
